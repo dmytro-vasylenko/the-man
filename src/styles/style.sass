@@ -1,0 +1,202 @@
+@import url(https://fonts.googleapis.com/css?family=Maven+Pro)
+
+*
+	margin: 0
+	padding: 0
+	font-family: "Maven Pro", sans-serif
+
+html, body
+	width: 100%
+	height: 100%
+
+header
+	width: 100%
+	height: 60px
+	background: black
+	position: fixed
+	top: 0
+	text-align: center
+	z-index: 99999999
+
+	a
+		padding: 5px 10px
+		margin: 5px 5px
+		line-height: 40px
+		color: white
+		background: black
+		display: inline-block
+		text-decoration: none
+		text-transform: uppercase
+		font-size: 18px
+		font-weight: bold
+		transition: all 0.2s ease-in
+		user-select: none
+
+		&:hover
+			background: white !important
+			color: black
+
+main
+	width: 100%
+	max-height: 100%
+	position: fixed
+	top: 60px
+	bottom: 25px
+	box-sizing: border-box
+	background-color: rgba(0, 0, 0, 0.5)
+	background: url(/images/main.jpg) no-repeat
+	background-size: cover
+
+@keyframes slideDown
+	0%
+		top: -100%
+	100%
+		top: 0
+
+@keyframes slideUp
+	0%
+		top: 0%
+	100%
+		top: -100%
+
+.info-block::-webkit-scrollbar-track
+	display: none
+
+.info-block::-webkit-scrollbar
+	display: none
+
+.info-block::-webkit-scrollbar-thumb
+	display: none
+
+.info-block
+	width: 100%
+	height: 100%
+	overflow-y: scroll
+	position: absolute
+	background: rgba(0, 0, 0, 0.75)
+	padding: 60px 120px
+	color: white
+	box-sizing: border-box
+	animation-name: slideDown
+	animation-duration: 1s
+	z-index: 9999999999
+
+	.container
+		width: 1100px
+		margin: 0 auto
+
+.transition-appear
+	opacity: 0
+	transform: translate3d(100%, 0, 0)
+
+.transition-appear.transition-appear-active
+	opacity: 1
+	transform: translate3d(0, 0, 0)
+
+.transition-leave
+	opacity: 1
+	transform: translate3d(0, 0, 0)
+
+.transition-leave.transition-leave-active
+	opacity: 0
+	transform: translate3d(100%, 0, 0)
+
+.event
+	width: 700px
+	margin: 0 auto
+	padding: 10px 20px
+	background: black
+	overflow: hidden
+	box-sizing: border-box
+
+	&:nth-child(2n)
+		background: #5e5e5e
+
+	.date
+		display: inline-block
+		margin-right: 30px
+		border-right: 1px solid white
+		padding-right: 10px
+
+	.location
+		display: inline-block
+
+	.tickets
+		display: inline-block
+		float: right
+
+.albums
+	img
+		max-width: 900px
+		width: 35%
+		height: auto
+		margin: auto
+		border: 2px solid white
+		box-sizing: border-box
+		display: block
+		cursor: pointer
+		transition: all 0.3s ease-in
+
+		&:hover
+			box-shadow: 0 0 10px 2px grey
+
+.album
+	img
+		width: 33.33%
+		height: auto
+		border: 2px solid white
+		float: left
+		box-sizing: border-box
+
+	.links
+		float: left
+		width: 66.66%
+
+		a
+			display: inline-block
+			background: white
+			text-align: center
+			padding: 20px 0
+			width: 25%
+			margin-left: 25%
+			transition: box-shadow 0.3s ease-in
+
+			&:nth-child(2n)
+				margin-left: 3px
+
+			&:hover
+				box-shadow: inset 0 0 3px 3px black
+
+			img
+				height: 40px
+				width: 100%
+				border: none
+
+.items
+	.item
+		width: 33.33%
+		display: inline-block
+		padding: 0 30px
+		box-sizing: border-box
+
+		img
+			width: 100%
+
+.footer
+	width: 100%
+	height: 25px
+	position: fixed
+	bottom: 0
+	background: black
+	color: white
+	line-height: 25px
+	text-align: center
+	font-size: 10px
+	user-select: none
+
+
+
+
+
+
+@import "pad.sass"
